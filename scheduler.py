@@ -44,7 +44,7 @@ def findAvailableSlots(schedules: List[List[Dict[str, str]]], duration: int) -> 
         start = slot['start']
         while start + duration <= slot['end']:
             all_slots.append({'start': start, 'end': start + duration})
-            start += PREFERRED_GRANULARITY # Move start time by the target interval
+            start += min(PREFERRED_GRANULARITY, duration) # Move start time by the target interval
     
     # Sort slots based on proximity to the preferred target time
     sorted_slots = sorted(all_slots, key=lambda slot: abs(((slot['start'] + slot['end']) / 2) - TARGET_TIME))

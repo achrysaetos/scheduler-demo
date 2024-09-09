@@ -16,7 +16,7 @@ Runs the `findAvailableSlots` function with custom test input. (Python 3.9+ reco
 1. Combine all the busy times into a range of unavailable minutes. For simplicity, this is represented as a list of tuples in minutes since midnight.
 2. Merge the overlapping busy minutes and calculate the intervals when everyone is free.
 3. From these free intervals, generate a list of all possible meeting times with the required duration. The gap between intervals can overlap by a default of 15 minutes (so people can start meetings at 4:15 for example).
-4. Select the 5 best times and convert them back to ISO format. The best times are the ones that are closest to the middle of the workday.
+4. Select the 5 best preferred times and convert them back to ISO format. In this case, the best times are the ones that are closest to the middle of the workday.
 
 ## Example
 ```
