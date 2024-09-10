@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta
 from typing import List, Dict
 
-PREFERRED_GRANULARITY = 15  # how much time results can overlap, in case people like having a tight schedule
-TARGET_TIME = 13 * 60  # determine when the best meeting times should be - default is middle of the workday (1:00 PM) in minutes
+PREFERRED_GRANULARITY = 15  # determines how much time results can overlap, in case people like having a tight schedule
+TARGET_TIME = 13 * 60  # determines the ideal meeting times - default is as close as possible to the middle of the workday (1:00 PM) in minutes
 NUM_RESULTS = 5  # upper bound on the number of results to return
 
 def findAvailableSlots(schedules: List[List[Dict[str, str]]], duration: int) -> List[Dict[str, str]]:

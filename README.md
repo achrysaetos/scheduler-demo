@@ -48,4 +48,4 @@ const duration = 30;
 
 ## Runtime
 
-The runtime of this algorithm is O(n log n), where n is the number busy times. This is because it's dominated by the sorting step - everything else is linear, such as merging overlapping intervals and finding free slots.
+The runtime of this algorithm is O(n log n), where n is the number blocks of time of length `duration` in a day. This is because it's dominated by the sorting step - everything else is linear, such as merging overlapping intervals and finding free slots.
